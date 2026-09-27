@@ -1,0 +1,20 @@
+# Python 3.12.3, CUDA 13.0 (torch 2.14.0+cu130), 2x NVIDIA RTX PRO 4000 Blackwell 24 GB, 62 GB RAM, Linux.
+# torch for CUDA 13: pip install torch==2.14.0 --index-url https://download.pytorch.org/whl/cu130
+torch==2.14.0
+transformers==5.17.0
+tokenizers==0.23.2
+safetensors==0.8.0
+huggingface_hub==1.33.0
+xgboost==3.4.1
+numpy==2.5.3
+pandas==3.0.6
+pyarrow==25.0.1
+scipy==1.18.1
+scikit-learn==1.9.1
+RapidFuzz==3.14.6
+joblib==1.6.0
+psutil==7.2.2
+tqdm==4.70.1
+# notebook runner (src/stage1_retrieval_rerank/nbrun.py)
+ipykernel==7.3.0
+jupyter_client==8.10.0

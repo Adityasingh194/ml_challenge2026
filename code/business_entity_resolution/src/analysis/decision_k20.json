@@ -1,0 +1,50 @@
+{
+ "rules": {
+  "submission_2 pipeline (v1)": {
+   "thr": 0.68,
+   "exclusive": true
+  },
+  "adapter only": {
+   "thr": 0.64,
+   "exclusive": true
+  },
+  "adapter + clustering": {
+   "thr": 0.64,
+   "exclusive": true
+  }
+ },
+ "delta": 0.0031600000000000517,
+ "k_new": 20,
+ "rep2": {
+  "submission_2 pipeline (v1)": {
+   "rule": "{'thr': 0.68, 'exclusive': True}",
+   "f05": 0.97646,
+   "precision": 0.99221,
+   "recall": 0.94881,
+   "fp": 6440,
+   "fn": 44274,
+   "india": 0.97211,
+   "us": 0.97936
+  },
+  "adapter only": {
+   "rule": "{'thr': 0.64, 'exclusive': True}",
+   "f05": 0.97932,
+   "precision": 0.99076,
+   "recall": 0.95921,
+   "fp": 7738,
+   "fn": 35285,
+   "india": 0.97883,
+   "us": 0.97965
+  },
+  "adapter + clustering": {
+   "rule": "{'thr': 0.64, 'exclusive': True}",
+   "f05": 0.97962,
+   "precision": 0.99083,
+   "recall": 0.96003,
+   "fp": 7685,
+   "fn": 34574,
+   "india": 0.97924,
+   "us": 0.97987
+  }
+ }
+}

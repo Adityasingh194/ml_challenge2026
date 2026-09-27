@@ -1,0 +1,5 @@
+		rule	f05	precision	recall	fp	fn	n_pred	india	us
+baseline stage-1	REPORT 75% eval	{'thr': 0.62, 'exclusive': True}	0.95103	0.9815	0.90564	78288	432816	4232428	0.94344	0.95608
+baseline stage-1	holdout	{'thr': 0.62, 'exclusive': True}	0.95186	0.98133	0.9063	3140	17060	168149	0.94379	0.95718
+stage-1 + CE 2nd stage	REPORT 75% eval	{'thr': 0.5, 'exclusive': True}	0.9782	0.9926	0.95393	32612	211323	4408245	0.97427	0.98082
+stage-1 + CE 2nd stage	holdout	{'thr': 0.5, 'exclusive': True}	0.97885	0.99249	0.95439	1314	8305	175078	0.97396	0.98208

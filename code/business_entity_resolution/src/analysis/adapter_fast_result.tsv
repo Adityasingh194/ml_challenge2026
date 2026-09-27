@@ -1,0 +1,4 @@
+	rule	f05	precision	recall	fp	fn	india	us
+submission_2 pipeline (v1)	{'thr': 0.68, 'exclusive': True}	0.97646	0.99221	0.94881	6440	44274	0.97211	0.97936
+adapter only	{'thr': 0.64, 'exclusive': True}	0.97932	0.99076	0.95921	7738	35285	0.97883	0.97965
+adapter + clustering	{'thr': 0.64, 'exclusive': True}	0.97962	0.99083	0.96003	7685	34574	0.97924	0.97987

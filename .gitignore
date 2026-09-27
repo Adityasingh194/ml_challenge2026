@@ -1,0 +1,4 @@
+# Regenerate via code/business_entity_resolution/src/scripts/run_all.sh — too large for git (candidate_pairs.tsv is ~2.7 GB)
+output/*.tsv
+**/__pycache__/
+*.pyc

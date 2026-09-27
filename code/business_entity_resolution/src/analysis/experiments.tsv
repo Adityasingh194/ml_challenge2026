@@ -1,0 +1,20 @@
+experiment	split	f05	delta_vs_baseline	precision	recall	india_f05	us_f05	n_pred	fp	fn	retrieval_recall	runtime_s	peak_ram_gb	peak_vram_gb	notes
+baseline_v1	holdout	0.94925	0	0.97997	0.90212	0.9402	0.9552		3357	17821	0.9742				leaderboard 0.934
+baseline_v1	eval80	0.94826	0	0.97995	0.90188	0.9396	0.954		112852	600068	0.9742				leaderboard 0.934
+baseline_v1	cv_oof	0.94808	0								0.9742				
+phase2:1 global	eval80	0.94826	0.0	0.97995	0.90188	0.93964	0.95401	5628310	112852	600068	0.9742	297	24.8	0	cv=0.94808 ho=0.94925 {"t": 0.66}
+phase2:2 per-country	eval80	0.94823	-3e-05	0.98058	0.90059	0.93957	0.95401	5616669	109095	607952	0.9742	297	24.8	0	cv=0.94811 ho=0.94941 {"t": 0.66, "t_in": 0.68, "t_us": 0.66}
+phase2:5 no-match guard	eval80	0.94826	0.0	0.97995	0.90188	0.93964	0.95401	5628310	112852	600068	0.9742	297	24.8	0	cv=0.94808 ho=0.94925 {"t": 0.66, "guard": 0.66}
+phase2:6 margin top1-top2	eval80	0.94826	0.0	0.97995	0.90188	0.93964	0.95401	5628310	112852	600068	0.9742	297	24.8	0	cv=0.94808 ho=0.94925 {"t": 0.66, "margin": 0.5, "t_hi": 0.8}
+phase2:7a top-1 rescue	eval80	0.94828	2e-05	0.97991	0.90193	0.93967	0.95402	5628857	113104	599773	0.9742	297	24.8	0	cv=0.94804 ho=0.9492 {"t": 0.66, "t_top1": 0.65}
+phase2:7b relative to best	eval80	0.94829	3e-05	0.98215	0.89682	0.93979	0.95396	5584225	99700	631001	0.9742	297	24.8	0	cv=0.94812 ho=0.94931 {"t": 0.66, "rel": 0.7}
+phase2:7c exclusive	eval80	0.95082	0.00256	0.98359	0.90077	0.94314	0.95594	5600567	91887	606846	0.9742	297	24.8	0	cv=0.94859 ho=0.94931 {"t": 0.66, "excl": true}
+phase2:COMBINED (greedy on CV)	eval80	0.95071	0.00245	0.98405	0.89954	0.94288	0.95594	5590366	89194	614354	0.9742	297	24.8	0	cv=0.94861 ho=0.94945 {"t": 0.66, "t_in": 0.68, "t_us": 0.66, "t_top1": 0.67, "excl": true}
+ce_full_2nd_stage	eval75	0.9782	0.02717	0.9926	0.95393	0.97427	0.98082	4408245	32612	211323	0.9742	1840	32.0	7	baseline(same entities, best rule)=0.95103 {'baseline stage-1': {'thr': 0.62, 'exclusive': True}, 'stage-1 + CE 2nd stage': {'thr': 0.5, 'exclusive': True}}
+ce_full_2nd_stage	leaderboard	0.971	+0.037 vs 0.934					5767241			0.9742				submission_2; implied France ~0.942 (was ~0.873)
+adapter_only	rep2_250k	0.97933	0.00287	0.9914	0.95754	0.97873	0.97974		7186	36727	0.9875	457			baseline(sub2 pipeline, same entities)=0.97646 K_NEW=10
+adapter_+_clustering	rep2_250k	0.97961	0.00315	0.99145	0.95827	0.97901	0.98		7149	36099	0.9875	457			baseline(sub2 pipeline, same entities)=0.97646 K_NEW=10
+adapter_plus_clustering	test_submission							5774362			0.9875(rep2 cand)				submission_3 VALIDATION PASSED sha256 84b0bbc0.../659306ab...; expected LB ~0.973-0.975
+adapter_only	rep2_250k	0.97932	0.00286	0.99076	0.95921	0.97883	0.97965		7738	35285	0.9901	1118			baseline(sub2 pipeline, same entities)=0.97646 K_NEW=20
+adapter_+_clustering	rep2_250k	0.97962	0.00316	0.99083	0.96003	0.97924	0.97987		7685	34574	0.9901	1118			baseline(sub2 pipeline, same entities)=0.97646 K_NEW=20
+adapter_plus_clustering_K20	rep2_250k	0.97962	+0.00001 vs K10 (0.97961)	0.99083	0.96003	0.97924	0.97987		7685	34574	0.9901				NO GAIN over K=10: recall +0.18pt offset by precision -0.06pt; test path not run; submission_3 stays

@@ -1,0 +1,18 @@
+{
+ "rules": {
+  "submission_2 pipeline (v1)": {
+   "thr": 0.68,
+   "exclusive": true
+  },
+  "adapter only": {
+   "thr": 0.66,
+   "exclusive": true
+  },
+  "adapter + clustering": {
+   "thr": 0.66,
+   "exclusive": true
+  }
+ },
+ "delta": 0.003149999999999986,
+ "k_new": 10
+}

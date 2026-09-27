@@ -1,0 +1,94 @@
+{
+ "experiment": "baseline_v1",
+ "leaderboard_test_f05": 0.934,
+ "metric": "macro F0.5 per S1 entity (empty-set rule); micro reported",
+ "rule": {
+  "kind": "global",
+  "thr": 0.66
+ },
+ "model_params": {
+  "max_depth": 8,
+  "learning_rate": 0.07,
+  "n_estimators": 400
+ },
+ "model_fp": "4331827724",
+ "cv_oof_f05": 0.94808,
+ "holdout": {
+  "f05": 0.94925,
+  "precision": 0.97997,
+  "recall": 0.90212,
+  "micro_f05": 0.96334,
+  "tp": 164248,
+  "fp": 3357,
+  "fn": 17821,
+  "by_country": {
+   "India": 0.9402,
+   "US": 0.9552
+  },
+  "by_source": {
+   "S2": {
+    "precision": 0.98,
+    "recall_of_candidates": 0.9267
+   },
+   "S3": {
+    "precision": 0.9799,
+    "recall_of_candidates": 0.925
+   }
+  }
+ },
+ "eval80": {
+  "f05": 0.94826,
+  "precision": 0.97995,
+  "recall": 0.90188,
+  "micro_f05": 0.96327,
+  "tp": 5515458,
+  "fp": 112852,
+  "fn": 600068,
+  "entities": 1766563,
+  "by_country": {
+   "India": 0.9396,
+   "US": 0.954
+  },
+  "by_source": {
+   "S2": {
+    "precision": 0.9802,
+    "recall_of_candidates": 0.9263
+   },
+   "S3": {
+    "precision": 0.9798,
+    "recall_of_candidates": 0.9252
+   }
+  },
+  "by_cand_script": {
+   "latin": {
+    "precision": 0.9809,
+    "recall_of_candidates": 0.9279
+   },
+   "non-latin": {
+    "precision": 0.967,
+    "recall_of_candidates": 0.8958
+   }
+  }
+ },
+ "retrieval": {
+  "union_recall": 0.9742,
+  "oracle_f05": 0.9913,
+  "max_candidates": 120,
+  "by_country": {
+   "India": {
+    "entities": 883188,
+    "recall": 0.9617,
+    "oracle_macro_f05": 0.9864
+   },
+   "US": {
+    "entities": 1323633,
+    "recall": 0.9826,
+    "oracle_macro_f05": 0.9947
+   }
+  }
+ },
+ "test_submission": {
+  "dir": "er_work/output/baseline_v1 (read-only copy of submission_1)",
+  "matching_sha256": "a1c8d3d5ff6083f57276c60cd576308b0e1045b1f1071b8827dffaba1878995d"
+ }
+}
