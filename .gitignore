@@ -1,4 +1,5 @@
-# Regenerate via code/business_entity_resolution/src/scripts/run_all.sh — too large for git (candidate_pairs.tsv is ~2.7 GB)
-output/*.tsv
+# candidate_pairs.tsv (~2.7 GB) exceeds GitHub's 100 MB per-file limit; regenerate via
+# code/business_entity_resolution/src/scripts/run_all.sh. matching_results.tsv (~92 MB) fits and is included.
+output/candidate_pairs.tsv
 **/__pycache__/
 *.pyc
